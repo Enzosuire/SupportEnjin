@@ -17,8 +17,8 @@
     <link rel="manifest" href="{{ asset('site.webmanifest') }}" crossorigin="use-credentials">
     <link rel="mask-icon" href="{{ asset('safari-pinned-tab.svg') }}" color="#5bbad5">
     <link rel="stylesheet" href="{{ asset('/css/bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
-    {{-- <script src="storage/js/vars.js"></script> --}}
+    <link rel="stylesheet" href="{{ asset('/css/style.css') }}"> 
+     <script src="storage/js/vars.js"></script>
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="@filter('layout.theme_color', '#ffffff')">
     @action('layout.head')

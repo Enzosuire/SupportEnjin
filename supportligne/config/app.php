@@ -559,6 +559,10 @@ return [
         Modules\Projet\Providers\ProjetServiceProvider::class,
         Modules\Facturations\Providers\FacturationsServiceProvider::class,
         Modules\Intervention\Providers\InterventionServiceProvider::class,
+        Modules\CustomCustomer\Providers\CustomCustomerServiceProvider::class,
+        Modules\ConversationPro\Providers\ConversationProServiceProvider::class,
+        
+        
 
 
         /*

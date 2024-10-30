@@ -70,6 +70,11 @@
                         </ul>
                     </div>
                 </div>
+                <br> 
+
+                @include('conversationpro::conversationpro')
+
+
 
                 <ul class="conv-info">
                     @if ($conversation->state != App\Conversation::STATE_DELETED)

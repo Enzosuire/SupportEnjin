@@ -24,6 +24,8 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Validator;
+use Modules\Projet\Models\Projet;
+
 
 class ConversationsController extends Controller
 {
@@ -358,6 +360,14 @@ class ConversationsController extends Controller
             }
         }
 
+        // Récupérer toutes les conversations pour le client spécifié avec les relations Eloquent
+        $conversation = Conversation::with('customer', 'user', 'projet')->findOrFail($id);
+        // Récupérer les projets du client une seule fois
+        // $projetsDuClient = Projet::where('id_customers', $conversation->customer_id)->get();
+         // Récupérer les projets du client
+        $projetsDuClient = Projet::join('customer_projet', 'projet.id', '=', 'customer_projet.id_projet')
+        ->where('customer_projet.id_customers', $conversation->customer_id)->get();
+
         return view($template, [
             'conversation'       => $conversation,
             'mailbox'            => $conversation->mailbox,
@@ -379,6 +389,7 @@ class ConversationsController extends Controller
             'is_following'       => $is_following,
             'from_aliases'       => $from_aliases,
             'from_alias'         => $from_alias,
+            'projetsDuClient' => $projetsDuClient,
         ]);
     }
 
@@ -3364,4 +3375,19 @@ class ConversationsController extends Controller
             return 1;
         }
     }
+
+    // public function update(Request $request, $id)
+    // {
+    //     // Logique pour mettre à jour la conversation
+    //     $validatedData = $request->validate([
+    //         'id_projet' => 'required|exists:projet,id', // Assurez-vous que le projet existe
+    //     ]);
+
+    //     $conversation = Conversation::findOrFail($id);
+    //     $conversation->id_projet = $validatedData['id_projet'];
+    //     $conversation->save();
+
+    //     return back()->with('success', 'Le projet a été associé à la conversation.');
+    // }
+    
 }

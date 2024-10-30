@@ -71,6 +71,7 @@ Route::get('/conversation/ajax-html/{action}', ['uses' => 'ConversationsControll
 Route::get('/search', 'ConversationsController@search')->name('conversations.search');
 Route::get('/conversation/undo-reply/{thread_id}', 'ConversationsController@undoReply')->name('conversations.undo');
 Route::get('/mailbox/{mailbox_id}/chats', 'ConversationsController@chats')->name('conversations.chats');
+Route::post('/conversation/={id}', 'ConversationsController@update')->name('conversation.update');
 
 // Mailboxes
 Route::get('/mailboxes', ['uses' => 'MailboxesController@mailboxes', 'laroute' => true])->name('mailboxes');
