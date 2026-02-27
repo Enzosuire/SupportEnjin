@@ -1,0 +1,264 @@
+.eup-att-dropzone {
+    padding: 8px;
+    text-align: center;
+    border: 2px dashed #D6DDE3;
+    border-radius: 5px;
+    color: #93a1af;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.eup-att-dropzone.eup-dragover {
+    background: #fff;
+}
+#eup-uploaded-attachments ul {
+    list-style: none;
+    padding: 0;
+}
+#eup-uploaded-attachments li {
+    display: inline-block;
+    line-height: 1;
+    margin: 1px 10px 5px 0;
+}
+#eup-container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 500px;
+}
+@media (max-width: 1028px) {
+    .eup-container-padded {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+.eup-ticket-header .label {
+    line-height: 20px;
+    position: relative;
+    top: 4px;
+}
+.eup-table-tickets .conv-thread-count {
+    width: 30px;
+}
+#eup-container .thread-person {
+    max-width: 221px;
+}
+#eup-container .thread-message {
+    margin-right: 0 !important;
+}
+
+/* ENZO CSS Modules */
+
+.navbar-static-top{
+    background-color: #021527f6;
+}
+
+.btn{
+    background-color: #24578E;
+    border-radius: 10px;
+}
+
+#resetButton{
+    background-color: #e2e6de;
+    border-radius: 10px;
+
+}
+
+/* ----------------------- SHOW INTERVENTION ------------------------------- */
+
+
+.h3-interventions {
+	font-size: 20px;
+	font-weight: 800;
+	color: #021527;
+	margin-bottom: 10px;
+	padding-left: 2.5%;
+}
+
+@media only screen and (max-width: 768px) {
+	.table-intervention {
+		margin-bottom: 0 !important;
+	}
+}
+
+@media only screen and (min-width: 769px) {
+	.table-intervention {
+		margin-bottom: 50px;
+	}
+}
+
+
+.info-intervention {
+	-webkit-column-count: 3; /* Pour certains navigateurs WebKit */
+    -moz-column-count: 3; /* Pour Firefox */
+    column-count: 3;
+}
+
+.info-intervention th{
+	background-color: #021527 !important;
+	color: white !important;
+	font-size: 15px;
+}
+
+.info-intervention th label{
+	font-weight: 800;
+}
+
+.info-intervention th span{
+	font-weight: 200 !important;
+}
+
+/* ----------------------- TABLEAU ------------------------------- */
+
+ @media only screen and (max-width: 768px) {
+
+	.entete {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		width: 95% !important;
+		margin: auto;
+	}
+
+	.entete h2 {
+		font-size: 24px;
+		margin-bottom: 15px;
+		text-align: center;
+	}
+
+	.btn-creation {
+			position: fixed;
+			bottom: 25px;
+			right: 15px;
+			z-index: 20;
+	}
+
+	.btn-new-user a{
+		background-color: #fff !important;
+		color: #021527 !important;
+		border: solid 1px #24578E;
+	}
+
+}
+
+
+@media only screen and (min-width: 769px) {
+
+	.entete {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 95% !important;
+		margin: auto;
+	}
+
+	.entete h2 {
+		font-size: 28px;
+	}
+}
+
+
+table tr:nth-child(odd) td {
+    background-color: #f3f7fa;
+}
+
+table tr:nth-child(even) td {
+    background-color: #F5F8FA;
+}
+
+table {
+    border-color: transparent;
+	width: 95% !important;
+	margin: auto;
+}
+
+table tr {
+	border-bottom: 5px solid transparent;
+	/* border: 2px solid white; */
+	background-color: #E7EDF2 ;
+	height: 50px;
+
+}
+
+
+table tr td {
+	vertical-align: middle;
+}
+
+table thead {
+    border-bottom: 1px solid transparent; 
+}
+
+.text-center a:first-child {
+	color: #24578E;
+	margin-right: 25px;
+}
+
+.text-center a:last-child {
+	color: #F2274C;
+	/* margin-left: 50px; */
+}
+
+
+.container-table {
+    background-color: #f8f9fa; /* Couleur de fond claire */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 20px; /* Espacement intérieur */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2; /* Couleur des lignes paires */
+}
+
+.table-hover tbody tr:hover {
+    background-color: #e9ecef; /* Couleur des lignes au survol */
+}
+
+.container{
+    margin: auto;
+} 
+
+
+table.table-conversations td.conv-subject {
+	overflow: visible;
+}
+
+.table-conversations .conv-fader {
+	background: #f3f7fa;
+
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    color: #b4c0ca;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+	position:sticky;
+    bottom: 0;
+    left: 0;
+    z-index: 1000; 
+}
+
+
+/* Sélécteur */
+.champ-list select {
+    background-color: #fff;
+    height: 45px;
+    font-size: 16px;
+    padding: 8px 15px 8px 15px;
+    color: #021527;
+    border: 2px solid #B3B9BE;
+}
+
+/* Sélécteur statut  */
+.status {
+	width: 950px; 
+
+}
